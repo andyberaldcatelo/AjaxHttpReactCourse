@@ -12,8 +12,7 @@ class NewPost extends Component {
   };
 
   componentDidMount() {
-    /*     console.log(this.props);
-     */
+   // console.log(this.props);
   }
 
   postDataHandler = () => {
@@ -24,7 +23,9 @@ class NewPost extends Component {
     };
     axios.post('/posts/', data).then((response) => {
       console.log(response);
-      this.setState({ submitted: true });
+      // this.setState({ submitted: true });
+      // this.props.history.replace('posts'); // Via props en remplacement de page
+      this.props.history.push('posts'); // Via props en empilement de page
     });
   };
 
